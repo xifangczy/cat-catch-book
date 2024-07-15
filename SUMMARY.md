@@ -8,6 +8,7 @@
 * [设置](docs/settings.md)
 * [M3U8解析合并下载](docs/m3u8parse.md)
 * [使用 m3u8dl:// 协议](docs/m3u8dl.md)
+* [调用程序](docs/diao-yong-cheng-xu.md)
 * [Dash MPD解析](docs/mpdparse.md)
 * [popup页面](docs/popup.md)
 * [深度搜索 / 缓存捕捉](docs/popup-1.md)
