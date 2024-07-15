@@ -37,5 +37,7 @@ description: N_m3u8DL-CLI 非常优秀的第三方m3u8文件合并下载工具�
 更多N\_m3u8DL-CLI使用方法，查看官方使用文档 [https://nilaoda.github.io/N\_m3u8DL-CLI/](https://nilaoda.github.io/N\_m3u8DL-CLI/)
 
 {% hint style="info" %}
-N\_m3u8DL-CLI作者已经放弃了功能更新，新开发功能更加强大的N\_m3u8DL-RE 猫抓会持续关注，等待版本稳定 猫抓会第一时间支持新版程序。
+N\_m3u8DL-CLI 已停止开发，作者已开发功能更加强大新程序 [https://github.com/nilaoda/N\_m3u8DL-RE](https://github.com/nilaoda/N\_m3u8DL-RE)
+
+可参考 [diao-yong-ben-di-cheng-xu.md](diao-yong-ben-di-cheng-xu.md "mention")说明进行设置调用。
 {% endhint %}
