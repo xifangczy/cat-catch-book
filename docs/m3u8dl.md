@@ -39,5 +39,5 @@ description: N_m3u8DL-CLI 非常优秀的第三方m3u8文件合并下载工具�
 {% hint style="info" %}
 N\_m3u8DL-CLI 已停止开发，作者已开发功能更加强大新程序 [https://github.com/nilaoda/N\_m3u8DL-RE](https://github.com/nilaoda/N\_m3u8DL-RE)
 
-可参考 [diao-yong-ben-di-cheng-xu.md](diao-yong-ben-di-cheng-xu.md "mention")说明进行设置调用。
+可参考 [invoke.md](invoke.md "mention")说明进行设置调用。
 {% endhint %}
