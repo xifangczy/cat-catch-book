@@ -19,7 +19,7 @@ description: 需要猫抓 v2.5.3+
 猫抓 - 设置 - 调用程序 - 参数设置
 
 ```
-m3u8dlre://${url} --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-name "${title}_${now}" --auto-select ${referer|exists:'-H "Referer: *"'}
+m3u8dlre://"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-name "${title}_${now}" --auto-select ${referer|exists:'-H "Referer: *"'}
 ```
 
 现在已完成所有设置。
