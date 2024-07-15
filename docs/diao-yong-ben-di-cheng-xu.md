@@ -2,11 +2,11 @@
 description: 需要猫抓 v2.5.3+
 ---
 
-# 调用程序
+# 调用本地程序
 
 <figure><img src="../.gitbook/assets/invoke.svg" alt=""><figcaption><p>调用程序图标</p></figcaption></figure>
 
-设置 - 开启 调用协议。在资源列表页 出现调用按钮 ，点击即可打开你设定的协议。
+设置 - 开启 调用程序。在资源列表页 出现调用按钮 ，点击即可打开你设定的协议。
 
 如果你想要开启的程序没有调用协议 (URL Protocol) 可以使用 [https://github.com/xifangczy/URLProtocol](https://github.com/xifangczy/URLProtocol) 为其注册一个。
 
