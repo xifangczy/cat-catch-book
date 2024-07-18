@@ -25,3 +25,11 @@ m3u8dlre://"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save
 现在已完成所有设置。
 
 想要调用 N\_m3u8DL-RE 点击调用图标皆可。
+
+
+
+### 测试参数
+
+添加参数 `--cat-catch-test` 在调用程序之前会提示即将调用的程序以及参数。
+
+例如 `m3u8dlre://"${url}" --cat-catch-test`
