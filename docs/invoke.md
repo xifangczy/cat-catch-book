@@ -14,7 +14,7 @@ description: 需要猫抓 v2.5.3+
 
 分别下载以上两个工具，并放置在一起。
 
-打开 URLProtocol 协议名填入 `m3u8dlre`选择调用目标，选择 `N_m3u8DL-RE.exe`
+打开 URLProtocol 协议名填入 `m3u8dlre`，选择调用目标 `N_m3u8DL-RE.exe`
 
 猫抓 - 设置 - 调用程序 - 参数设置
 
