@@ -28,7 +28,7 @@
 
 ![复制选项](../.gitbook/assets/copy.png)
 
-## N\_m3u8DL-CLI
+### URL Protocol m3u8dl
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption></figcaption></figure>
 
@@ -103,10 +103,27 @@
 接收端监听POST，接收格式为JSON
 
 ```json
-// JSON
+// JSON 接受到嗅探的媒体数据
 {
-    action: "catch 或 addKey. catch表示捕获到资源 addKey表示捕获到m3u8疑似的key",
-    data: "数据, catch为json格式。addKey为base64字符串",
+    action: "catch",
+    data: {
+        name: "文件名",
+        url: "资源地址",
+        size: "资源大小"
+        requestHeaders: {
+            referer: "也可能不存在",
+            origin: "也可能不存在",
+            cookie: "也可能不存在"
+        }
+        ...: "其他"
+    },
+    tabId: "数据来源的tab ID"
+}
+
+// JSON 接受到疑似密钥
+{
+    action: "addKey",
+    data: "base64数据",
     tabId: "数据来源的tab ID"
 }
 ```

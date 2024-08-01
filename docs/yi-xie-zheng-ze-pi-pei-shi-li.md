@@ -6,14 +6,6 @@
 (^https://.*\.fbcdn\.net/.*)&bytestart=.*
 ```
 
-## YouTube
-
-```
-(^https://.*\.googlevideo\.com\/videoplayback\?.*)&range=.*
-```
-
-扩展填写MP4
-
 ## instagram
 
 ```
