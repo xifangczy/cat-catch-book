@@ -1,8 +1,16 @@
 ---
-description: N_m3u8DL-CLI 非常优秀的第三方m3u8文件合并下载工具，支持HLS m3u8和DASH mpd
+description: N_m3u8DL-CLI  N_m3u8DL-RE 非常优秀的第三方m3u8文件合并下载工具，支持HLS m3u8和DASH mpd
 ---
 
 # 使用 m3u8dl:// 协议
+
+
+
+{% hint style="info" %}
+N\_m3u8DL-CLI原作者以停止更新。建议优先使用[N\_m3u8DL-RE](m3u8dl.md#n\_m3u8dl-re)
+{% endhint %}
+
+## N\_m3u8DL-CLI
 
 下载N\_m3u8DL-CLI [https://github.com/nilaoda/N\_m3u8DL-CLI/releases](https://github.com/nilaoda/N\_m3u8DL-CLI/releases)
 
@@ -20,7 +28,7 @@ description: N_m3u8DL-CLI 非常优秀的第三方m3u8文件合并下载工具�
 
 <figure><img src="../.gitbook/assets/opm3u8dl.png" alt=""><figcaption></figcaption></figure>
 
-看到此窗口，恭喜你已经完成了`m3u8dl://`协议的注册，之后在猫抓设置，开启 `调用m3u8dl://协议下载m3u8 和 mpd` 选项，你可以自定义修改调用参数，点击 `查看参数说明` 按钮查看所有参数列表。
+看到此窗口，恭喜你已经完成了`m3u8dl://`协议的注册，之后在猫抓设置， `启用 m3u8dl:// 下载 m3u8 or mpd` 选项选择`N_m3u8DL-CLI`，你可以自定义修改调用参数，点击 `查看参数说明` 按钮查看所有参数列表。
 
 <figure><img src="../.gitbook/assets/2.png" alt=""><figcaption><p>开启调用协议和参数设置</p></figcaption></figure>
 
@@ -36,8 +44,22 @@ description: N_m3u8DL-CLI 非常优秀的第三方m3u8文件合并下载工具�
 
 更多N\_m3u8DL-CLI使用方法，查看官方使用文档 [https://nilaoda.github.io/N\_m3u8DL-CLI/](https://nilaoda.github.io/N\_m3u8DL-CLI/)
 
-{% hint style="info" %}
-N\_m3u8DL-CLI 已停止开发，作者已开发功能更加强大新程序 [https://github.com/nilaoda/N\_m3u8DL-RE](https://github.com/nilaoda/N\_m3u8DL-RE)
+## N\_m3u8DL-RE
 
-可参考 [invoke.md](invoke.md "mention")说明进行设置调用。
+[https://github.com/nilaoda/N\_m3u8DL-RE](https://github.com/nilaoda/N\_m3u8DL-RE) 是CLI的升级版，原作者全新开发，支持跨平台。但目前不支持m3u8dl:// 协议。需要使用[https://github.com/xifangczy/URLProtocol](https://github.com/xifangczy/URLProtocol) 工具。
+
+下载URLProtocol和N\_m3u8DL-RE 并放置在一起，打开URLProtocol工具，协议名填写 `m3u8dl` 点击选择目标程序按钮，选择`N_m3u8DL-RE.exe` 点击添加。完成了 RE的注册。
+
+{% hint style="info" %}
+如果你之前有使用N\_m3u8DL-CLI注册过协议，请使用CLI的--unregisterUrlProtocol 参数卸载。
 {% endhint %}
+
+再猫抓设置 `URL Protocol m3u8dl` -> `参数设置` 修改为 N\_m3u8DL-RE 的参数。
+
+示例：
+
+`"${url}" --save-dir "%USERPROFILE%\Downloads\m3u8dl" --save-name "${title}_${now}" ${referer|exists:'-H "Referer:*"'} --del-after-done --no-log`
+
+更多参数查看N\_m3u8DL-RE github页面。
+
+使用和N\_m3u8DL-CLI一致，嗅探到m3u8资源直接点击下载图标即可调用N\_m3u8DL-RE下载该m3u8文件。
