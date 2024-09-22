@@ -9,7 +9,7 @@
 ## instagram
 
 ```
-(^https://scontent[a-z0-9-]*\.cdninstagram\.com/v/.*)&bytestart=.*
+(^https://scontent[a-z0-9-]*\.cdninstagram\.com/.*)&bytestart=.*
 ```
 
 {% hint style="info" %}
