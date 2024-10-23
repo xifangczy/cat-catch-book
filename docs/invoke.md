@@ -19,7 +19,7 @@ description: 需要猫抓 v2.5.3+
 猫抓 - 设置 - 调用程序 - 参数设置
 
 ```
-m3u8dlre://"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-name "${title}_${now}" --auto-select ${referer|exists:'-H "Referer: *"'}
+m3u8dlre:"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save-name "${title}_${now}" --auto-select ${referer|exists:'-H "Referer: *"'}
 ```
 
 现在已完成所有设置。
@@ -32,4 +32,4 @@ m3u8dlre://"${url}" --save-dir "%USERPROFILE%\Downloads" --del-after-done --save
 
 添加参数 `--cat-catch-test` 在调用程序之前会提示即将调用的程序以及参数。
 
-例如 `m3u8dlre://"${url}" --cat-catch-test`
+例如 `m3u8dlre:"${url}" --cat-catch-test`
