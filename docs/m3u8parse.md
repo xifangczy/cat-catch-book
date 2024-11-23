@@ -4,6 +4,10 @@ description: 猫抓内置了一个简单的m3u8解析器，能够轻松合并下
 
 # M3U8解析合并下载
 
+{% hint style="info" %}
+m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用 边下边存 或者 第三方下载软件 m3u8dl 协议等。
+{% endhint %}
+
 抓取到m3u8资源时旁边会多出一个解析图标，点击进入m3u8解析器。
 
 ![进入解析器的按钮](<../.gitbook/assets/a (1).png>)
@@ -86,4 +90,4 @@ description: 猫抓内置了一个简单的m3u8解析器，能够轻松合并下
 
 ### 调用m3u8DL下载
 
-猫抓已经支持调用 [N\_m3u8DL-CLI](https://github.com/nilaoda/N\_m3u8DL-CLI) 的协议，具体查看教程[m3u8dl.md](m3u8dl.md "mention")
+猫抓已经支持调用 [N\_m3u8DL-CLI](https://github.com/nilaoda/N_m3u8DL-CLI) 的协议，具体查看教程[m3u8dl.md](m3u8dl.md "mention")
