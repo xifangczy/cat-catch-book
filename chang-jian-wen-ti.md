@@ -20,9 +20,7 @@
 
 ## 抓不到YouTube
 
-{% content-ref url="docs/yi-xie-zheng-ze-pi-pei-shi-li.md" %}
-[yi-xie-zheng-ze-pi-pei-shi-li.md](docs/yi-xie-zheng-ze-pi-pei-shi-li.md)
-{% endcontent-ref %}
+寄人篱下 没办法啊
 
 ## 某鹅通无法下载
 
