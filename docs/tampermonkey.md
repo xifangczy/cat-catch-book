@@ -81,16 +81,17 @@ window.postMessage({
 | :----: | :---------------------------------------------: | ---------------------------------------------------------- |
 | action |                 "catCatchFFmpeg"                | 固定 必须                                                      |
 |   use  | <p>"transcode"</p><p>"merge"<br>"onlyAudio"</p> | <p>transcode 格式为 mp4<br>merge 音频视频合并<br>onlyAudio 提取音频</p> |
-|  media |                     _Array_                     | <p>媒体文件</p><p>详见 media 对象数组</p>                            |
+|  media |                     _Array_                     | <p>媒体文件</p><p><strong>详见 media 对象数组</strong></p>           |
 |  title |                  document.title                 | <p>最后输出的文件名</p><p>可为空</p><p>默认 document.title</p>          |
+| output |                    "test.mp4"                   | <p>希望最终输出的文件名<br>可为空<br>参数为空会用title当文件名</p>                |
 
 ### media 对象数组
 
-|  属性  |         值         | 说明                                            |
-| :--: | :---------------: | --------------------------------------------- |
-| data |         \*        | <p>媒体的URL</p><p>可以是blob地址(必须可以正常打开)</p>       |
-| type | "video" / "audio" | <p>媒体类型，音频还是视频。</p><p>可为空</p><p>默认"video"</p> |
-| name |         \*        | <p>文件名<br>为空自动 "memory"+时间戳 命名<br></p>        |
+|  属性  |         值         | 说明                                                                      |
+| :--: | :---------------: | ----------------------------------------------------------------------- |
+| data |         \*        | <p>媒体的URL</p><p>可以是URL.createObjectURL后的url<br>firefox浏览器可以传递Blob对象</p> |
+| type | "video" / "audio" | <p>媒体类型，音频还是视频。</p><p>可为空</p><p>默认"video"</p>                           |
+| name |         \*        | <p>文件名<br>为空自动 "memory"+时间戳 命名<br></p>                                  |
 
 ### 示例 合并音频和视频
 
@@ -104,7 +105,8 @@ window.postMessage({
     action: "catCatchFFmpeg",
     use: "merge",
     media: media,
-    title: document.title
+    title: document.title,
+    output: "mergeOK.mp4"
 });
 ```
 
