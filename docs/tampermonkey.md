@@ -77,13 +77,13 @@ window.postMessage({
 
 需要猫抓2.3.0 以上版本
 
-|   属性   |                      值(示例)                      | 说明                                                         |
-| :----: | :---------------------------------------------: | ---------------------------------------------------------- |
-| action |                 "catCatchFFmpeg"                | 固定 必须                                                      |
-|   use  | <p>"transcode"</p><p>"merge"<br>"onlyAudio"</p> | <p>transcode 格式为 mp4<br>merge 音频视频合并<br>onlyAudio 提取音频</p> |
-|  media |                     _Array_                     | <p>媒体文件</p><p><strong>详见 media 对象数组</strong></p>           |
-|  title |                  document.title                 | <p>最后输出的文件名</p><p>可为空</p><p>默认 document.title</p>          |
-| output |                    "test.mp4"                   | <p>希望最终输出的文件名<br>可为空<br>参数为空会用title当文件名</p>                |
+|   属性   |                      值(示例)                      | 说明                                                                       |
+| :----: | :---------------------------------------------: | ------------------------------------------------------------------------ |
+| action |                 "catCatchFFmpeg"                | 固定 必须                                                                    |
+|   use  | <p>"transcode"</p><p>"merge"<br>"onlyAudio"</p> | <p>transcode 格式为 mp4<br>merge 音频视频合并<br>onlyAudio 提取音频</p>               |
+|  media |                     _Array_                     | <p>媒体文件</p><p><strong>详见 media 对象数组</strong></p>                         |
+|  title |                  document.title                 | <p>最后输出的文件名</p><p>可为空</p><p>默认 document.title</p>                        |
+| output |                    "test.mkv"                   | <p>希望最终输出的文件名 与title不同，可以自定义容器格式。<br>可为空<br>参数为空会用title当文件名 后缀为默认mp4</p> |
 
 ### media 对象数组
 
