@@ -4,6 +4,8 @@ description: 猫抓内置了一个简单的m3u8解析器，能够轻松合并下
 
 # M3U8解析合并下载
 
+## 解析合并
+
 {% hint style="info" %}
 m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用 边下边存 或者 第三方下载软件 m3u8dl 协议等。
 {% endhint %}
@@ -91,3 +93,41 @@ m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用
 ### 调用m3u8DL下载
 
 猫抓已经支持调用 [N\_m3u8DL-CLI](https://github.com/nilaoda/N_m3u8DL-CLI) 的协议，具体查看教程[m3u8dl.md](m3u8dl.md "mention")
+
+## 入口
+
+通过 其他功能-M3U8解析器 进入解析器入口
+
+### BaseURL
+
+如果你输入的m3u8内容 切片是本地文件（不包含网址），需要输入BaseURL 获取远程切片文件。
+
+### m3u8Url
+
+直接输入m3u8的url地址 点击解析 进行下一步操作。
+
+### https://bmmmd.com/${range:1-5}.ts
+
+该输入框支持range标签，例如 `https://bmmmd.com/${range:1-3}.ts` 回车 会生成\
+`https://bmmmd.com/1.ts`\
+`https://bmmmd.com/2.ts`\
+`https://bmmmd.com/3.ts`
+
+range标签支持第二个参数 表示强制多少位，不足的前面补0 例如 `https://bmmmd.com/${range:1-3,3}.ts` 回车生成\
+`https://bmmmd.com/001.ts`\
+`https://bmmmd.com/002.ts`\
+`https://bmmmd.com/003.ts`
+
+range标签 支持结束序号未知 例如 `https://bmmmd.com/${range:1-?}.ts` 回车 从1开始尝试获取切片 直到获取404或错误。
+
+### Referer
+
+以上所有操作，如果出现错误，应提前输入 Referer 请求头数据，如果只输入网址，只设置 Referer
+
+想设置其他请求头，需使用JSON格式 例如
+
+`{"origin":"https://www.bmmd.com","referer":"https://www.bmmd.com/test.m3u8"}`
+
+{% hint style="info" %}
+严格JSON格式，属性必须使用双引号。
+{% endhint %}
