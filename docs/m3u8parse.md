@@ -108,12 +108,12 @@ m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用
 
 ### https://bmmmd.com/${range:1-5}.ts
 
-该输入框支持range标签，例如 `https://bmmmd.com/${range:1-3}.ts` 回车 会生成\
+该输入框支持range标签，例如 `https://bmmmd.com/${range:1-3}.ts` 回车 生成\
 `https://bmmmd.com/1.ts`\
 `https://bmmmd.com/2.ts`\
 `https://bmmmd.com/3.ts`
 
-range标签支持第二个参数 表示强制多少位，不足的前面补0 例如 `https://bmmmd.com/${range:1-3,3}.ts` 回车生成\
+range标签支持第二个参数 表示强制多少位，不足的前面补0 例如 `https://bmmmd.com/${range:1-3,3}.ts` 回车 生成\
 `https://bmmmd.com/001.ts`\
 `https://bmmmd.com/002.ts`\
 `https://bmmmd.com/003.ts`
@@ -126,7 +126,7 @@ range标签 支持结束序号未知 例如 `https://bmmmd.com/${range:1-?}.ts` 
 
 想设置其他请求头，需使用JSON格式 例如
 
-`{"origin":"https://www.bmmd.com","referer":"https://www.bmmd.com/test.m3u8"}`
+`{"origin":"https://www.bmmmd.com","referer":"https://www.bmmmd.com/test.m3u8"}`
 
 {% hint style="info" %}
 严格JSON格式，属性必须使用双引号。
