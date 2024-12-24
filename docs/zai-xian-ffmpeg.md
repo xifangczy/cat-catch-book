@@ -25,6 +25,10 @@ description: 一个辅助猫抓的在线工具，负责 缓存捕获、在线合
 
 右键点击文件名 自动在 cmd 光标处填入文件名，方面输入命令。
 
+## 局域网文件互传
+
+局域网内 不同设备同时打开 [https://ffmpeg.bmmmd.com/](https://ffmpeg.bmmmd.com/) 会出现 网络邻居。点击对方用户名可以选择一个或多个文件发送给对方。名称完全随机，自己名称会在一开始在console中出现 `hello XXX` 右键点击对方用户名，自动填写发送信息命令 `sendText '对方用户名' '信息'`回车发送信息。所有文件传输以及信息只使用局域网传输，不经过任何远程服务器。由开源项目 snapdrop 提供支持。
+
 ## 命令列表
 
 <table><thead><tr><th width="152" align="center">命令</th><th width="300" align="center">说明</th><th align="center">示例</th></tr></thead><tbody><tr><td align="center">ffmpeg</td><td align="center">/</td><td align="center">/</td></tr><tr><td align="center">clearFFmpeg</td><td align="center">清理缓存在浏览器的ffmpeg</td><td align="center"></td></tr><tr><td align="center">clear</td><td align="center">清空console</td><td align="center"></td></tr><tr><td align="center">add</td><td align="center">添加网络文件<br>不少网站限制，成功率不高</td><td align="center">add https://bmmmd.com/test.mp4</td></tr><tr><td align="center">down</td><td align="center">下载文区的文件</td><td align="center">down test.mp4</td></tr><tr><td align="center">play</td><td align="center">预览文件<br>参数可以为url</td><td align="center">play test.mp4</td></tr><tr><td align="center">ren</td><td align="center">重命名文件</td><td align="center">ren test.mp4 bmm.mp4</td></tr><tr><td align="center">milk</td><td align="center">赞助</td><td align="center"></td></tr><tr><td align="center">thanks</td><td align="center">赞助感谢名单</td><td align="center"></td></tr><tr><td align="center">help</td><td align="center">帮助</td><td align="center"></td></tr><tr><td align="center">mycat</td><td align="center">🐱</td><td align="center"></td></tr></tbody></table>
