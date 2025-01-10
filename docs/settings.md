@@ -8,6 +8,12 @@
 
 ![抓取类型](../.gitbook/assets/g.png)
 
+抓取类型，也称为mime扩展类型，部分网站不提供正确的文件后缀，需使用mime扩展类型判断文件，由于历史原因默认配置有 `audio/*` 和 `video/*` 特别的类型，不代表支持通配符。
+
+{% hint style="info" %}
+扩展名 类型 不区分大小写，储存时自动转为小写。
+{% endhint %}
+
 ## **正则匹配**
 
 浏览器准备打开这个URL之前就对这个URL进行正则匹配。所以优先级最高。
@@ -52,7 +58,7 @@
 
 以上列表标粗的标签可以使用函数
 
-<table><thead><tr><th width="123.33333333333331">函数</th><th width="188">说明</th><th>示例</th></tr></thead><tbody><tr><td>slice</td><td>字符截取</td><td><p><code>${title|slice:0,5}</code><br>提取标题前5个字符</p><p><br><code>${title|slice:-10}</code><br>提取标题末尾10个字符<br><br>参数设定来自 js语言 slice 函数</p></td></tr><tr><td>replace</td><td>字符替换</td><td><code>${fullFileName|replace:".m3u8",".mp4"}</code><br>文件名中的".m3u8"字符替换成".mp4"<br><br><code>${title|replace:"网站",""}</code><br>删除标题中 网址 一词<br><br>参数设定来自 js语言 replace 函数</td></tr><tr><td>replaceAll</td><td>字符替换</td><td>同上<br>replace 只替换一次。replaceAll 多次替换。<br><br><code>${fullDate|replaceAll:"-","/"}</code><br>2020/12/28<br>把日期的分隔符换成 "/"</td></tr><tr><td>regexp</td><td>正则提取</td><td><code>${url|regexp:"(https?://[^?]*)"}</code><br>资源地址，提取不包含参数的地址</td></tr><tr><td>exists</td><td><p>如果存在则输出</p><p>反之输出第二个参数，没有第二参数，不输出任何内容。</p></td><td><p><code>${referer|exists:'--headers "Referer:*"'}</code><br>如果存在referer 则输出 --headers "Referer:*"<br>*号最终会被替换成referer本身。</p><p><em>建议填写在m3u8DL参数内，如果存在referer向m3u8DL传递<code>--headers</code>参数，如果没有则不传递。</em></p><p><br><code>${fullFileName|exists:"*","${title}"}</code><br>如果有文件名输出自己，没有文件名输出网页标题。</p></td></tr><tr><td>to</td><td><p>字符串转换<br>base64<br>urlEncode</p><p>urlDecode<br>lowerCase<br>upperCase</p></td><td><p><code>${title|to:base64}</code></p><p>5rWL6K+V6KeG6aKR</p><p>base64编码<br><br><code>${url|to:urlEncode}</code><br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url编码<br><br><code>${url|to:lowerCase}</code> 英文字母转小写<br><code>${url|to:upperCase}</code> 英文字母转大写</p></td></tr></tbody></table>
+<table><thead><tr><th width="123.33333333333331">函数</th><th width="188">说明</th><th>示例</th></tr></thead><tbody><tr><td>slice</td><td>字符截取</td><td><p><code>${title|slice:0,5}</code><br>提取标题前5个字符</p><p><br><code>${title|slice:-10}</code><br>提取标题末尾10个字符<br><br>参数设定来自 js语言 slice 函数</p></td></tr><tr><td>replace</td><td>字符替换</td><td><code>${fullFileName|replace:".m3u8",".mp4"}</code><br>文件名中的".m3u8"字符替换成".mp4"<br><br><code>${title|replace:"网站",""}</code><br>删除标题中 网址 一词<br><br>参数设定来自 js语言 replace 函数</td></tr><tr><td>replaceAll</td><td>字符替换</td><td>同上<br>replace 只替换一次。replaceAll 多次替换。<br><br><code>${fullDate|replaceAll:"-","/"}</code><br>2020/12/28<br>把日期的分隔符换成 "/"</td></tr><tr><td>regexp</td><td>正则提取</td><td><code>${url|regexp:"(https?://[^?]*)"}</code><br>资源地址，提取不包含参数的地址</td></tr><tr><td>exists</td><td><p>如果存在则输出</p><p>反之输出第二个参数，没有第二参数，不输出任何内容。</p></td><td><p><code>${referer|exists:'--headers "Referer:*"'}</code><br>如果存在referer 则输出 --headers "Referer:*"<br>*号最终会被替换成referer本身。</p><p><em>建议填写在m3u8DL参数内，如果存在referer向m3u8DL传递<code>--headers</code>参数，如果没有则不传递。</em></p><p><br><code>${fullFileName|exists:"*","${title}"}</code><br>如果有文件名输出自己，没有文件名输出网页标题。</p></td></tr><tr><td>to</td><td><p>字符串转换<br>base64<br>urlEncode</p><p>urlDecode<br>lowerCase<br>upperCase<br>filter</p></td><td><p><code>${title|to:base64}</code></p><p>5rWL6K+V6KeG6aKR</p><p>base64编码<br><br><code>${url|to:urlEncode}</code><br>https%3A%2F%2Fbmmmd.com%2Ftest.m3u8<br>url编码<br><br><code>${url|to:lowerCase}</code> 英文字母转小写<br><code>${url|to:upperCase}</code> 英文字母转大写<br><br><code>${url|to:filter}</code>  无法作为文件名的字符替换为HTML 字符实体</p></td></tr><tr><td>filter</td><td>过滤/替换 无法作为文件名的字符</td><td><code>${url|filter:"_"}</code> 把不能作为文件名的字符 替换为 下划线<br>被替换的字符 <code>&#x3C; > : " | ? * ~</code></td></tr></tbody></table>
 
 支持链式调用，例如&#x20;
 
