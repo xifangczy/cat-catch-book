@@ -122,6 +122,10 @@ range标签支持第二个参数 表示强制多少位，不足的前面补0 例
 
 range标签 支持结束序号未知 例如 `https://bmmmd.com/${range:1-?}.ts` 回车 从1开始尝试获取切片 直到获取404或错误。
 
+{% hint style="warning" %}
+一个url地址 目前只允许一个range标签。未知序号 最大只允许探测 9999 个切片。
+{% endhint %}
+
 ### Referer
 
 以上所有操作，如果出现错误，应提前输入 Referer 请求头数据，如果只输入网址，只设置 Referer
