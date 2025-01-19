@@ -7,3 +7,7 @@
 {% hint style="info" %}
 可能文档更新不及时，有问题可以去Github提交。
 {% endhint %}
+
+{% hint style="info" %}
+If you need the documentation in English, please refer to the GitHub wiki. Writing documentation is a time-consuming task, so please be patient while I work on improving the English version.
+{% endhint %}
