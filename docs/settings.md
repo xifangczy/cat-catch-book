@@ -116,8 +116,8 @@
 
 示例:
 
-```javascript
-// JSON 接受到嗅探的媒体数据
+```json
+// {"action": "${action}", "data": ${data}, "tabId": "${tabId}"}
 {
     action: "catch",
     data: {
