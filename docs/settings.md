@@ -104,35 +104,15 @@
 
 频繁清理可能会导致部分网站在嗅探到资源后立刻被清理，遇到嗅探不到资源的网站，请先尝试清理模式改为 正常 或者 不清理。
 
-## 发送数据(2.5.2+) <a href="#send" id="send"></a>
+## 发送数据 <a href="#send" id="send"></a>
 
-接收端监听POST，接收格式为JSON
+能够自定义发送数据到第三方地址上，请求体 确保为JOSN格式
 
-```json
-// JSON 接受到嗅探的媒体数据
-{
-    action: "catch",
-    data: {
-        name: "文件名",
-        url: "资源地址",
-        size: "资源大小"
-        requestHeaders: {
-            referer: "也可能不存在",
-            origin: "也可能不存在",
-            cookie: "也可能不存在"
-        }
-        ...: "其他"
-    },
-    tabId: "数据来源的tab ID"
-}
+`${action}`为特殊标签, 表示不同数据类型, 如果是捕获数据替换为 `catch` 字符串, 如果是密钥数据 会被替换为 `addKey` 字符串。
 
-// JSON 接受到疑似密钥
-{
-    action: "addKey",
-    data: "base64数据",
-    tabId: "数据来源的tab ID"
-}
-```
+如果`${action}` 是`catch` ${data} 则为 文件对象转为JSON格式内容
+
+如果`${action}` 是`addKey` ${data} 则为 密钥base64字符串
 
 {% hint style="info" %}
 数据发送功能测试中，不同版本JSON结构会有差异。
