@@ -114,6 +114,34 @@
 
 如果`${action}` 是`addKey` ${data} 则为 密钥base64字符串
 
+示例:
+
+```javascript
+// JSON 接受到嗅探的媒体数据
+{
+    action: "catch",
+    data: {
+        name: "文件名",
+        url: "资源地址",
+        size: "资源大小"
+        requestHeaders: {
+            referer: "也可能不存在",
+            origin: "也可能不存在",
+            cookie: "也可能不存在"
+        }
+        ...: "其他"
+    },
+    tabId: "数据来源的tab ID"
+}
+
+// JSON 接受到疑似密钥
+{
+    action: "addKey",
+    data: "base64数据",
+    tabId: "数据来源的tab ID"
+}
+```
+
 {% hint style="info" %}
 数据发送功能测试中，不同版本JSON结构会有差异。
 {% endhint %}
