@@ -114,7 +114,7 @@
 
 如果`${action}` 是`addKey` ${data} 则为 密钥base64字符串
 
-示例:
+示例: `{"action": "${action}", "data": ${data}, "tabId": "${tabId}"}`
 
 ```json
 // {"action": "${action}", "data": ${data}, "tabId": "${tabId}"}
