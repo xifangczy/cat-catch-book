@@ -11,7 +11,7 @@
 * [调用本地程序](docs/invoke.md)
 * [Dash MPD解析](docs/mpdparse.md)
 * [popup页面](docs/popup.md)
-* [弹出页面 / 筛选页面 / 预览页面](docs/tan-chu-ye-mian-shai-xuan-ye-mian-yu-lan-ye-mian.md)
+* [弹出页面 / 筛选页面 / 预览页面](docs/preview.md)
 * [深度搜索 / 缓存捕捉](docs/popup-1.md)
 * [媒体控制](docs/other.md)
 * [使用油猴脚本给猫抓发送资源](docs/tampermonkey.md)
