@@ -16,6 +16,8 @@ Firefox 扩展
 GitHub源码
 {% endembed %}
 
+<figure><img src="../.gitbook/assets/QR Code for Edge Desktop Users.png" alt="" width="300"><figcaption><p>Edge Android版 扩展下载</p></figcaption></figure>
+
 {% hint style="warning" %}
 💔**猫抓是开源的，任何人都可以修改上架到应用商店，已经有不少加上广告代码、恶意代码后上架的非官方版本，请注意自己的数据安全。所有安装地址以github和用户文档为准。**
 {% endhint %}
