@@ -6,6 +6,8 @@ description: popup页面 扩展主要展示页面，展示出成功获取到的�
 
 ![popup页面](../.gitbook/assets/popup.png)
 
+![](../.gitbook/assets/image.png) 如果资源包含该图标，表示资源来自深度搜索、正则表达式、油猴脚本等特殊资源。
+
 ## 当前页面
 
 当前页面抓取的资源。
