@@ -58,7 +58,7 @@
 
 ## 标签系统 / 替换关键词(2.3.1+) <a href="#keywords" id="keywords"></a>
 
-用于 复制选项 N\_m3u8DL-CLI 保存文件名 等 使用的关键词替换。标签区分大小写。
+用于 复制 、数据发送、URL Protocol m3u8dl、调用程序、替换标签 等 使用的关键词替换。标签区分大小写。
 
 详细查看 [tag.md](tag.md "mention")
 
