@@ -6,6 +6,7 @@
 
 * [安装地址](docs/install.md)
 * [设置](docs/settings.md)
+* [标签系统 / 替换关键词](docs/tag.md)
 * [M3U8解析合并下载](docs/m3u8parse.md)
 * [使用 m3u8dl:// 协议](docs/m3u8dl.md)
 * [调用本地程序](docs/invoke.md)
