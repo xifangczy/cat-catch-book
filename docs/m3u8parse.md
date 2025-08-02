@@ -70,7 +70,7 @@ m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用
 
 ### **下载范围**
 
-选择你要下载的切片范围。如果m3u8存在#EXT-X-MAP标签，不是从 1 起始的视频可能无法播放。支持填写时间格式 00:00:00
+选择你要下载的切片范围。如果m3u8存在#EXT-X-MAP标签，不是从 1 起始的视频可能无法播放。**支持填写时间格式 00:00:00**
 
 ### **只要音频**
 
@@ -100,27 +100,27 @@ m3u8合并下载 需要有足够的内存，否则可能会崩溃。建议使用
 
 通过 其他功能-M3U8解析器 进入解析器入口
 
+支持输入 m3u8链接 / m3u8文件内容 / 切片url的列表 都可进行解析。
+
 ### BaseURL
 
 如果你输入的m3u8内容 切片是本地文件（不包含网址），需要输入BaseURL 获取远程切片文件。
 
-### m3u8Url
+### ${range} 标签支持
 
-直接输入m3u8的url地址 点击解析 进行下一步操作。
+用法：${range:1-10} 生成 1 到10 的数字字符。
 
-### https://bmmmd.com/${range:1-5}.ts
-
-该输入框支持range标签，例如 `https://bmmmd.com/${range:1-3}.ts` 回车 生成\
+例如 `https://bmmmd.com/${range:1-3}.ts` 解析 生成\
 `https://bmmmd.com/1.ts`\
 `https://bmmmd.com/2.ts`\
 `https://bmmmd.com/3.ts`
 
-range标签支持第二个参数 表示强制多少位，不足的前面补0 例如 `https://bmmmd.com/${range:1-3,3}.ts` 回车 生成\
+支持第二个参数，强制多少位，不足的前面补0 例如 `https://bmmmd.com/${range:1-3,3}.ts` 解析 生成\
 `https://bmmmd.com/001.ts`\
 `https://bmmmd.com/002.ts`\
 `https://bmmmd.com/003.ts`
 
-range标签 支持结束序号未知 例如 `https://bmmmd.com/${range:1-?}.ts` 回车 从1开始尝试获取切片 直到获取404或错误。
+支持结束序号未知 例如 `https://bmmmd.com/${range:1-?}.ts` 解析 从1开始尝试获取切片 直到获取404或错误。
 
 {% hint style="warning" %}
 一个url地址 目前只允许一个range标签。未知序号 最大只允许探测 9999 个切片。
