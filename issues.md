@@ -8,9 +8,7 @@ Bug 提交前请先查看 [chang-jian-wen-ti.md](chang-jian-wen-ti.md "mention")
 
 Github 提交issue [https://github.com/xifangczy/cat-catch/issues](https://github.com/xifangczy/cat-catch/issues)
 
-邮箱 qqoowuwo@126.com
-
-[https://bmmmd.com/](https://bmmmd.com/) 任意一个社交网站的私信。
+邮箱 xifangczy@gmail.com
 
 {% hint style="danger" %}
 **一定提供涉及网址否则无法帮助到你，如果需要账号登陆，请使用邮件方式发送给我。**
