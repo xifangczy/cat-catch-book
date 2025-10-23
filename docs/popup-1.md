@@ -46,7 +46,7 @@ description: 区别猫抓1.0版 2.0增加主动探测功能。
 
 ### **屏幕捕捉(beta)**
 
-使用分享屏幕方法实现录制视频，需要chromium 104版本以上。可以录制网站版权保护的视频。
+使用分享屏幕方法实现录制视频，需要chromium 104版本以上。
 
 <figure><img src="../.gitbook/assets/l2.png" alt=""><figcaption><p>屏幕捕捉</p></figcaption></figure>
 
