@@ -1,6 +1,7 @@
 # Table of contents
 
 * [猫抓(cat catch)](README.md)
+* [声明](sheng-ming.md)
 
 ## 📖 说明 <a href="#docs" id="docs"></a>
 
