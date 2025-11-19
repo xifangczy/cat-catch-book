@@ -2,7 +2,7 @@
 
 ## 抓不到资源如何做
 
-先尝试[深度搜索](docs/popup-1.md#shen-du-sou-suo)。再尝试[缓存捕捉](docs/popup-1.md#huan-cun-bu-zhuo)，该功能需要等待视频缓冲完毕后才能下载。仍然无法下载，可以尝试最后的[屏幕捕捉](docs/popup-1.md#ping-mu-bu-zhuo)。
+先尝试[深度搜索](../docs/popup-1.md#shen-du-sou-suo)。再尝试[缓存捕捉](../docs/popup-1.md#huan-cun-bu-zhuo)，该功能需要等待视频缓冲完毕后才能下载。仍然无法下载，可以尝试最后的[屏幕捕捉](../docs/popup-1.md#ping-mu-bu-zhuo)。
 
 如果你遇到只有`缓存捕捉`才能下载资源的网站，请到github提交bug 或 发送邮件。
 
@@ -34,7 +34,7 @@
 
 ## m3u8资源合并下载后有声音，但视频花屏
 
-该资源使用了非常规的加密方式，目前暂无办法解决，可以尝试[缓存捕捉](docs/popup-1.md#huan-cun-bu-zhuo)。
+该资源使用了非常规的加密方式，目前暂无办法解决，可以尝试[缓存捕捉](../docs/popup-1.md#huan-cun-bu-zhuo)。
 
 ## m3u8资源合并下载，打开只显示一张图片 / 碎片资源为png格式
 

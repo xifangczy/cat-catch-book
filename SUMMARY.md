@@ -20,9 +20,9 @@
 * [一些正则匹配示例](docs/yi-xie-zheng-ze-pi-pei-shi-li.md)
 * [在线ffmpeg](docs/zai-xian-ffmpeg.md)
 
-***
+## 其他
 
-* [常见问题](chang-jian-wen-ti.md)
-* [Bug 提交](issues.md)
-* [强制屏蔽网站](blockedsite.md)
+* [强制屏蔽网站](qi-ta/blockedsite.md)
+* [Bug 提交](qi-ta/issues.md)
+* [常见问题](qi-ta/chang-jian-wen-ti.md)
 * [更新日志](https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md)
