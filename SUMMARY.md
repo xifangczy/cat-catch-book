@@ -24,5 +24,5 @@
 
 * [常见问题](chang-jian-wen-ti.md)
 * [Bug 提交](issues.md)
-* [屏蔽网站](ping-bi-wang-zhan.md)
+* [屏蔽网站](blockedsite.md)
 * [更新日志](https://github.com/xifangczy/cat-catch/blob/master/CHANGELOG.md)
